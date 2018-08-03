@@ -1,7 +1,5 @@
 body {
-    background-image: url('../assets/image/GRENERY.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: aliceblue;
 }
 
 .container {
@@ -52,5 +50,9 @@ body {
 #profile-pokemon  img {
     max-width: 30%;
     max-height: 30vh;
+    display: inline-block;
     
 }
+
+
+
