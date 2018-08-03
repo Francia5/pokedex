@@ -30,13 +30,11 @@ function pokemon(data) {
             pokemonContainer.append(picture, paragraph);
         }
     }
-}
+};
 
 function mistake() {
     console.log("Error");
-}
-
-
+};
 
 
 $('#search-poke').click(function (e) {
@@ -48,7 +46,7 @@ $('#search-poke').click(function (e) {
     $('#exampleModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('focus')
     })
-})
+});
 
 function getPokemon() {
     $.ajax({
@@ -57,11 +55,9 @@ function getPokemon() {
         datatype: 'json',
         crossDomain: true
     }).done(response).fail(error);
-}
+};
 
 function response(data) {
-    // console.log(data);
-
     var name = data.name;
     var url = data.sprites.front_default;
     var image = `<img src="${url}/>`;
@@ -79,7 +75,6 @@ function response(data) {
     var height = data.height;
     var totalHeight = height / 10 + "m";
     var identificador = data.id;
-
 
     var $pidentificador = `# ${identificador}`;
     var $pname = `${name}`;
@@ -102,19 +97,13 @@ function response(data) {
     $('#speed').html($pspeed);
     $('#sp-atk').html($pspecialAttack);
     $('#sp-def').html($pspecialDefense);
+    $('#type').html($ptype);
+    $('#abilities').html($pabilities);
+    $('#weight').html($pweight);
+    $('#height').html($pheight);
 
-
-    
-
-
-
-    // var pokemonContainer = $("#pokemon-container");
-    // pokemonContainer.append($pidentificador, $ptype, image, $pname, $pabilities, $pspeed, $pspecialDefense,
-    //     $pspecialAttack, $pdefense, $pattack, $php, $pweight, $pheight);
-}
+};
 
 function error() {
     alert("Error al cargar la página");
-}
-
-4
+};
