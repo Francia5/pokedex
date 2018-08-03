@@ -97,7 +97,7 @@ function response(data) {
     $('#speed').html($pspeed);
     $('#sp-atk').html($pspecialAttack);
     $('#sp-def').html($pspecialDefense);
-    $('#type').html($ptype);
+    $('#type').html("TYPE: " + "" + $ptype);
     $('#abilities').html($pabilities);
     $('#weight').html($pweight);
     $('#height').html($pheight);
